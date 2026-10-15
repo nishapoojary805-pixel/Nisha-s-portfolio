@@ -1,0 +1,318 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  }
+
+:root {
+--background: #0b1020;
+--surface: #141c30;
+--primary: #38bdf8;
+--text: #f1f5f9;
+--muted: #a5b4c8;
+}
+
+body {
+font-family: Arial, Helvetica, sans-serif;
+background: var(--background);
+color: var(--text);
+line-height: 1.7;
+}
+
+.navbar {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 20px 8%;
+background: #101729;
+position: sticky;
+top: 0;
+z-index: 100;
+border-bottom: 1px solid #253047;
+}
+
+.logo {
+color: white;
+font-size: 28px;
+font-weight: bold;
+text-decoration: none;
+}
+
+.logo span,
+.hero h1 span {
+color: var(--primary);
+}
+
+.nav-links {
+display: flex;
+gap: 25px;
+}
+
+.nav-links a {
+color: var(--text);
+text-decoration: none;
+transition: color 0.3s;
+}
+
+.nav-links a:hover {
+color: var(--primary);
+}
+
+.hero {
+min-height: 88vh;
+padding: 70px 10%;
+display: flex;
+justify-content: space-between;
+align-items: center;
+gap: 50px;
+background:
+radial-gradient(circle at 80% 40%, #172c50 0%, transparent 40%),
+var(--background);
+}
+
+.hero-text {
+max-width: 650px;
+}
+
+.welcome,
+.subtitle {
+color: var(--primary);
+font-size: 13px;
+font-weight: bold;
+letter-spacing: 3px;
+}
+
+.hero h1 {
+font-size: clamp(42px, 6vw, 70px);
+line-height: 1.2;
+margin: 15px 0;
+}
+
+.hero h2 {
+font-size: 25px;
+color: #cbd5e1;
+margin-bottom: 15px;
+}
+
+.hero-text > p:not(.welcome) {
+color: var(--muted);
+max-width: 550px;
+}
+
+.buttons {
+display: flex;
+flex-wrap: wrap;
+gap: 15px;
+margin-top: 30px;
+}
+
+.btn {
+display: inline-block;
+background: var(--primary);
+color: #07111e;
+text-decoration: none;
+padding: 12px 24px;
+border-radius: 7px;
+font-weight: bold;
+transition: 0.3s;
+}
+
+.btn:hover {
+transform: translateY(-3px);
+box-shadow: 0 5px 25px #38bdf844;
+}
+
+.btn-outline {
+background: transparent;
+border: 1px solid var(--primary);
+color: var(--primary);
+}
+
+.profile-circle {
+width: 280px;
+height: 280px;
+flex-shrink: 0;
+border-radius: 50%;
+border: 3px solid var(--primary);
+display: flex;
+justify-content: center;
+align-items: center;
+box-shadow: 0 0 60px #38bdf822;
+}
+
+.profile-placeholder {
+width: 240px;
+height: 240px;
+border-radius: 50%;
+background: linear-gradient(135deg, #172554, #0e7490);
+display: flex;
+justify-content: center;
+align-items: center;
+font-size: 100px;
+font-weight: bold;
+color: white;
+}
+
+.section {
+padding: 90px 10%;
+text-align: center;
+}
+
+.section h2 {
+font-size: 38px;
+margin: 10px 0 35px;
+}
+
+.description {
+max-width: 750px;
+margin: 0 auto 25px;
+color: var(--muted);
+}
+
+.card-container {
+display: flex;
+justify-content: center;
+flex-wrap: wrap;
+gap: 22px;
+}
+
+.card,
+.project-card {
+background: var(--surface);
+border: 1px solid #27334b;
+border-radius: 14px;
+padding: 28px;
+flex: 1 1 220px;
+max-width: 350px;
+text-align: left;
+transition: transform 0.3s, border-color 0.3s;
+}
+
+.card:hover,
+.project-card:hover {
+transform: translateY(-7px);
+border-color: var(--primary);
+}
+
+.card .icon {
+font-size: 32px;
+margin-bottom: 12px;
+}
+
+.card h3,
+.project-card h3 {
+margin-bottom: 10px;
+}
+
+.card p,
+.project-card p {
+color: var(--muted);
+font-size: 14px;
+}
+
+.project-number {
+display: inline-block;
+color: var(--primary);
+font-size: 14px;
+margin-bottom: 15px;
+}
+
+.tags {
+display: flex;
+gap: 8px;
+flex-wrap: wrap;
+margin-top: 20px;
+}
+
+.tags span {
+background: #20314a;
+color: var(--primary);
+padding: 4px 10px;
+border-radius: 5px;
+font-size: 12px;
+}
+
+.contact-note {
+color: var(--muted);
+font-size: 13px;
+margin-top: 15px;
+}
+
+footer {
+text-align: center;
+padding: 25px;
+background: #101729;
+border-top: 1px solid #253047;
+color: var(--muted);
+}
+
+@media (max-width: 800px) {
+.navbar {
+flex-direction: column;
+gap: 15px;
+}
+
+```
+.nav-links {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.hero {
+    flex-direction: column-reverse;
+    text-align: center;
+    padding: 60px 7%;
+}
+
+.buttons {
+    justify-content: center;
+}
+
+.profile-circle {
+    width: 200px;
+    height: 200px;
+}
+
+.profile-placeholder {
+    width: 170px;
+    height: 170px;
+    font-size: 70px;
+}
+
+.section {
+    padding: 65px 7%;
+}
+```
+
+}
+.contact-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.contact-card {
+    background: #141c30;
+    border: 1px solid #27334b;
+    border-radius: 14px;
+    padding: 30px;
+    max-width: 400px;
+    width: 100%;
+}
+
+.contact-card h3 {
+    margin-bottom: 15px;
+}
+
+.contact-card p {
+    color: #a5b4c8;
+    margin-bottom: 25px;
+    overflow-wrap: anywhere;
+}
+
+.contact-card .btn {
+    display: inline-block;
+}
